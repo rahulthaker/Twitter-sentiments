@@ -1,0 +1,67 @@
+{% extends 'Trending/base.html' %}
+
+{% block title %}Trending{% endblock %}
+
+
+{% block home_active %}active{% endblock %}
+
+{% block body %}
+{% load static %}
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-4 py-5 order-md-last">
+	                 <div class="heading-section ftco-animate">
+        	          	<span class="subheading">WordCloud</span>
+        	            <h2 class="mb-4">India Today</h2>
+        	            <p>A word cloud (also known as tag cloud or text cloud) is a visual representation of word frequency and value. It is used to highlight how often a specific term or category appears in a source of data. The more times a keyword is present in a data set, the bigger and bolder the keyword appears.</p>
+                         <p>This WordCloud gives us a visual Respresentation of the text, words used by people  in which the frequency of word varies directly with the size.</p>
+        	            <p><a href="https://amueller.github.io/word_cloud/" class="btn btn-primary py-3 px-4">Learn More</a></p>
+    	          </div>
+    			</div>
+    			<div class="col-lg-8 services-wrap px-4 pt-5">
+    				<div class="row pt-md-3">
+                            <img src="data:image/png;base64,{{fig1|safe}}"/>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <br/><br/>
+
+    <div class="container" style="border:5px solid black">
+        <div class="row">
+        <div class="col-lg-3 py-5">
+            <div class="heading-section ftco-animate">
+	          	<span class="subheading">Daily Trends</span>
+	            <h2 class="mb-4">Trending Topics in India</h2>
+	            <p>The bargraph here shows the Top 10 trending topics in India Today .</p>
+	            <p><a href={% url 'Trending:topics' %} class="btn btn-primary py-3 px-4">All topics</a></p>
+	          </div>
+        </div>
+        <div class="col-lg-9 py-5">
+            <img src="data:image/png;base64,{{fig2|safe}}" style="border:2px solid black ;">
+        </div>
+    </div>
+
+    </div>
+    <br/><br/>
+
+    <div class="hero-wrap js-fullheight" style="background-image: url({% static 'Trending/images/home1.jpg' %})" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+            <div class="col-md-4 ftco-animate">
+          	<h2 class="subheading">Welcome to Twitter Sentiments</h2>
+          	<h1>Top Hashtag </h1>
+            <p class="mb-4">In Last 24-hours</p>
+            <p><a href="{% url 'Trending:topics' %}" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
+          </div>
+            <div class="col-md-8 ftco-animate">
+                <img src="data:image/png;base64,{{fig3|safe}}" style="border-radius: 30px;">
+            </div>
+        </div>
+      </div>
+    </div>
+    <br/><br/>
+{% endblock %}

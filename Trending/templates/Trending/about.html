@@ -1,0 +1,76 @@
+{% extends 'Trending/base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block about_active %}active{% endblock %}
+
+
+{% block body %}
+{% load static %}
+
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'Trending/images/bg_2.jpg' %}');" data-stellar-background-ratio="0.5">
+	<div class="overlay"><!--remove this--></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">About Us</h1>
+            <p class="breadcrumbs">
+				<span class="mr-2">
+				<a href="{% url 'Trending:index' %}">Home <i class="ion-ios-arrow-forward"></i></a>
+				</span>
+				<span>About us <i class="ion-ios-arrow-forward"></i></span>
+			</p>
+          </div>
+        </div>
+      </div><!--remove this-->
+
+</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url('{% static 'Trending/images/about.jpg' %}');">
+    					<a href="#" class="icon-video d-flex justify-content-center align-items-center">
+    						<span class="icon-play"></span>
+    					</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 pl-md-5">
+    				<div class="row justify-content-start py-5">
+		          <div class="col-md-12 heading-section ftco-animate">
+		            <h2 class="mb-4">Welcome to Twitter Sentiments</h2>
+		            <p>contextual mining of text which identifies and extracts subjective information in source material, and helping a business to understand the social sentiment of their brand, product or service while monitoring online conversations.</p>
+					  <span class="subheading">Tools Used</span>
+		            <div class="services-wrap">
+		            	<a href="https://www.djangoproject.com/start/overview/" class="services-list">Django
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a href="https://developers.google.com/apis-explorer" class="services-list">Google Api
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a href="https://developer.twitter.com/en/docs" class="services-list">Twitter Api
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a href="https://matplotlib.org/" class="services-list">Data Visualisation
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a href="https://textblob.readthedocs.io/en/dev/" class="services-list">Sentiment Analysis
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+{% endblock %}
+
+<!-- works fine
+<div class="container" style="width:100;height:100">
+    {{ fig|safe }}
+</div>
+-->
+
