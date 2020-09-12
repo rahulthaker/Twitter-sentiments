@@ -162,3 +162,14 @@ bargraph = getBar()
 topics = get_topics()
 
 
+#Topic_pop up details
+def topic_board():
+    topic_pop_up=[]
+    for topic,tweets in zip(dataset['topic'].value_counts().index,dataset['topic'].value_counts().values):
+        list_temp=[]
+        list_temp.append(topic)
+        list_temp.append(tweets)
+        random_tweet=dataset.query(f"topic == '{topic}'")[['full_text']].sample(n=1).iat[0,0]
+        list_temp.append(random_tweet)
+        topic_pop_up.append(list_temp)
+    return topic_pop_up
